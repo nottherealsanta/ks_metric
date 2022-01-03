@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from sklearn.metrics import make_scorer
 
 
 def ks_table(
@@ -101,6 +102,8 @@ def ks_score(
 
     """
 
-    _, ks = gains_table(y_true, y_pred, ret_ks=True)
+    _, ks = ks_table(y_true, y_pred, ret_ks=True)
 
     return ks
+
+ks_scorer = make_scorer(ks_score, greater_is_better=True)
