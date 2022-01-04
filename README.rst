@@ -50,6 +50,8 @@ KS table :
 
 .. code:: python
 
+   from ks_metric import ks_table
+
    ks_table(y_train, clf.predict_proba(X_train)[:,1])
 
 KS scorer (for hyperparameter search) :
@@ -57,6 +59,7 @@ KS scorer (for hyperparameter search) :
 .. code:: python
 
    from sklearn.model_selection import GridSearchCV
+   from ks_metric import ks_scorer
 
    clf = GridSearchCV(estimator=LogisticRegression(), param_grid={'C':[0.01,0.1,1]}, scoring=ks_scorer)
 
