@@ -9,6 +9,8 @@ non-target. The model that produces the greatest amount of separability
 between target and non-target distribution would be considered the
 better model.
 
+For more info about KS read [this](https://nottherealsanta.github.io/mlogs/posts/KS/ks.html)
+
 Installation
 ------------
 
